@@ -1,5 +1,9 @@
+read -p "[desert-wolf] clear home directory? (y/N) " -r
+if [[ "$REPLY" =~ (y|Y).* ]]; then
+  rm -r "${HOME}/*"
+fi
+
 echo "[desert-wolf] setting up directories" &&
-rm -r "${HOME}/*" &&
 xdg-user-dirs-update --set DESKTOP "${HOME}/library/desktop" && mkdir -p $(xdg-user-dir DESKTOP) &&
 xdg-user-dirs-update --set DOWNLOAD "${HOME}/temp" && mkdir -p $(xdg-user-dir DOWNLOAD) &&
 xdg-user-dirs-update --set TEMPLATES "${HOME}/library/templates" && mkdir -p $(xdg-user-dir TEMPLATES) &&
