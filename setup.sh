@@ -6,4 +6,5 @@
 (source ./setup/yay.sh) &&
 (source ./setup/tools.sh) &&
 (source ./setup/config.sh) &&
+neofetch --source "$(xdg-user-dir WALLPAPERS)/desret-wolf/dark.png" --w3m &&
 echo "[desert-wolf] setup finished succesfully. you may want to look through ${HOME}/.config"
