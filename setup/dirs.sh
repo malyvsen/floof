@@ -12,6 +12,6 @@ xdg-user-dirs-update --set DOCUMENTS "${HOME}/creative/writing" && mkdir -p $(xd
 xdg-user-dirs-update --set MUSIC "${HOME}/library/audio/music" && mkdir -p $(xdg-user-dir MUSIC) &&
 xdg-user-dirs-update --set PICTURES "${HOME}/library/visual" && mkdir -p $(xdg-user-dir PICTURES) &&
 xdg-user-dirs-update --set VIDEOS "${HOME}/library/visual/videos" && mkdir -p $(xdg-user-dir VIDEOS) &&
-xdg-user-dirs-update --set WALLPAPERS "${HOME}/library/visual/wallpapers/desert-wolf" && mkdir -p $(xdg-user-dir WALLPAPERS) &&
+xdg-user-dirs-update --set WALLPAPERS "${HOME}/library/visual/wallpapers" && mkdir -p $(xdg-user-dir WALLPAPERS) &&
 xdg-user-dirs-update --set REPOS "${HOME}/library/coding" && mkdir -p $(xdg-user-dir REPOS) &&
 xdg-user-dirs-update
