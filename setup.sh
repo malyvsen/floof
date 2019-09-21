@@ -47,7 +47,6 @@ REPOS_DIR="${HOME}/library/coding"
   echo "[desert-wolf] setting up config files" &&
   cp -r ./home/. "${HOME}/" &&
   xrdb ~/.Xresources &&
-  cp ./*.png "${WALLPAPERS_DIR}/" &&
   wal -t -i "${WALLPAPER}"
 ) &&
 
