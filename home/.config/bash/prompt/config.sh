@@ -31,7 +31,7 @@ else
   [end_separator]=" "
   [section_separator]="  "
 
-  [git_branch]=""
+  [git_branch]=" "
   [git_stash]="▽"
   [git_ahead]="⬆"
   [git_behind]="⬇"

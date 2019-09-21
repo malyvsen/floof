@@ -21,7 +21,7 @@ function prompt_section_git {
     return 0
   fi
 
-  echo -n "${PROMPT_SYMBOLS[git_branch]} $git_branch"
+  echo -n "${PROMPT_SYMBOLS[git_branch]}$git_branch"
 
   local number_behind_ahead="$(git rev-list --count --left-right '@{upstream}...HEAD' 2>/dev/null)"
   local number_ahead="${number_behind_ahead#*	}"
