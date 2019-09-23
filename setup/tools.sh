@@ -1,4 +1,6 @@
-echo "[desert-wolf] installing additional tools" &&
+source "$(dirname ${BASH_SOURCE[0]})/utils.sh" &&
+
+rice_message "installing additional tools" &&
 sudo pacman -S python python-pip python2 &&
 pip install thefuck --user &&
 yay -S python-pywal feh imagemagick &&

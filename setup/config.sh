@@ -1,5 +1,7 @@
-echo "[desert-wolf] setting up config files" &&
-cp -r ./home/. "${HOME}/" &&
+source "$(dirname ${BASH_SOURCE[0]})/utils.sh" &&
+
+rice_message "setting up config files" &&
+cp -r "$(dirname ${BASH_SOURCE[0]})/../home/." "${HOME}/" &&
 xrdb ~/.Xresources &&
-wal -t -i "$(xdg-user-dir WALLPAPERS)/desert-wolf/dark.png" &&
+wal -t -i "$(xdg-user-dir WALLPAPERS)/$RICE_NAME.jpg" &&
 source ~/.bashrc
