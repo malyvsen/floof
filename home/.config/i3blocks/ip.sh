@@ -1,3 +1,5 @@
+source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
+
 function display() {
   if [ $(ip route) -eq "" ]; then
     echo "No connection"
@@ -27,7 +29,7 @@ function display_loop() {
 display_loop &
 while read click; do
   if [ $click -eq 1 ]; then
-    i3-msg -q "workspace 10; exec i3-sensible-terminal -e sudo wifi-menu"
+    launch_terminal "ip address | less -R"
   fi
   rkill -TERM $!
   display_loop &
