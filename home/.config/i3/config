@@ -42,13 +42,13 @@ set_from_resource $color14  i3wm.color14    #eeeeee
 set_from_resource $color15  i3wm.color15    #ffffff
 
 # class                 border  background  text    indicator   child_border
-client.focused          $color7 $color2     $color7 $color7     $color7
-client.focused_inactive $color6 $color2     $color7 $color2     $color6
-client.unfocused        $color2 $color2     $color7 $color2     $color2
-client.urgent           $color1 $color2     $color7 $color1     $color1
-client.placeholder      $color2 $color2     $color7 $color2     $color2
+client.focused          $color7 $color0     $color7 $color7     $color7
+client.focused_inactive $color6 $color0     $color7 $color2     $color6
+client.unfocused        $color2 $color0     $color7 $color2     $color2
+client.urgent           $color1 $color0     $color7 $color1     $color1
+client.placeholder      $color2 $color0     $color7 $color2     $color2
 
-client.background       $color2
+client.background       $color0
 
 
 

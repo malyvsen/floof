@@ -38,8 +38,8 @@ fi
 
 declare -A PROMPT_COLORS=(
 [background_ok]="6"
-[highlight_ok]="5"
-[background_error]="5"
+[highlight_ok]="1"
+[background_error]="1"
 [highlight_error]="2"
 [foreground]="0"
 [meta]="7"
