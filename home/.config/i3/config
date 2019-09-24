@@ -94,6 +94,8 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+for_window [window_role="GtkFileChooserDialog"] fullscreen enable
+
 
 
 
