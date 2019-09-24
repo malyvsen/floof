@@ -55,9 +55,9 @@ client.background       $color2
 
 ## Extra config
 
-# Loaded on startup
+# Load visual customizations
 exec_always --no-startup-id xrdb ~/.Xresources
-exec_always --no-startup-id wal -Rst
+exec_always --no-startup-id wal -Rqst
 
 # Start i3bar to display a workspace bar
 bar {
