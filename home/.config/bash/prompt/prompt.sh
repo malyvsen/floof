@@ -29,7 +29,7 @@ function prompt_start {
 function prompt_end {
   PS1+="$(prompt_colors ${PROMPT_COLORS[foreground]} ${PROMPT_COLORS[background]})"
   PS1+="${PROMPT_SYMBOLS[end_separator]}"
-  PS1+="\[\e[0m\]\[\e[K\]"
+  PS1+="\[\e[0m\]"
 
   unset __anything_printed
   unset __return_code

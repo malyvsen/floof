@@ -13,17 +13,17 @@ function prompt_append_section {
 
 # background $1, foreground $2
 function prompt_colors {
-  echo -n "\[\033[4${1};3${2}m\]"
+  echo -n "\[\e[4${1};3${2}m\]"
 }
 
 
 function prompt_background {
-  echo -n "\[\033[4${1}m\]"
+  echo -n "\[\e[4${1}m\]"
 }
 
 
 function prompt_foreground {
-  echo -n "\[\033[3${1}m\]"
+  echo -n "\[\e[3${1}m\]"
 }
 
 
