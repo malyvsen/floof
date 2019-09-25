@@ -1,23 +1,23 @@
 [ip]
-command=./ip.sh
+command=source ./ip.sh
 interval=persist
 
 
 [cpu]
-command=./cpu.sh
+command=source ./cpu.sh
 interval=persist
 
 
 [volume]
-command=./volume.sh
+command=source ./volume.sh
 interval=persist
 
 
 [weather]
-command=./weather.sh
+command=source ./weather.sh
 interval=persist
 
 
 [time]
-command=./time.sh
+command=source ./time.sh
 interval=persist
