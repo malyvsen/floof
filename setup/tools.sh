@@ -1,10 +1,10 @@
 source "$(dirname ${BASH_SOURCE[0]})/utils.sh" &&
 
 rice_message "installing additional tools" &&
-sudo pacman -S python python-pip python2 &&
+yay -S --needed python python-pip python2 &&
 pip install thefuck --user &&
-yay -S python-pywal feh imagemagick &&
-yay -S ttf-google-fonts-git &&
-yay -S ranger neofetch gotop-bin sysstat &&
-yay -S atom-editor-bin firefox &&
-yay -S scrot xclip pslist
+yay -S --needed python-pywal feh imagemagick &&
+yay -S --needed ttf-google-fonts-git &&
+yay -S --needed ranger neofetch gotop-bin sysstat &&
+yay -S --needed atom-editor-bin firefox &&
+yay -S --needed scrot xclip pslist
