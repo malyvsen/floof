@@ -1,4 +1,3 @@
-alias ..="cd .."
 alias home="cd ~"
 alias media="cd /run/media/$USER"
 alias list_users="cut -d: -f1 /etc/passwd"
