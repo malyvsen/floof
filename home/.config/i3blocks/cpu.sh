@@ -14,7 +14,7 @@ function display_loop() {
 
 display_loop &
 while read click; do
-  if [ $click -eq 1 ]; then
+  if [[ $click -eq 1 ]]; then
     launch_terminal "gotop"
   fi
 done

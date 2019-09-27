@@ -2,7 +2,7 @@ source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
 function display() {
   weather=$(curl -Ss 'https://wttr.in?0TQ' | cut -c 16- | head -2 | xargs echo)
-  if [ $? -eq 0 ]; then
+  if [[ $? -eq 0 ]]; then
     weather=$(echo "$weather" | sed "s/ °/°/g")
     echo "$weather"
     return 0
@@ -23,7 +23,7 @@ function display_loop() {
 
 display_loop &
 while read click; do
-  if [ $click -eq 1 ]; then
+  if [[ $click -eq 1 ]]; then
     launch_terminal "curl -s 'https://wttr.in?m' | less -R"
   fi
   rkill -TERM $!

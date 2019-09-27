@@ -21,7 +21,7 @@ function display_loop() {
 display
 display_loop &
 while read click; do
-  if [ $click -eq 1 ]; then
+  if [[ $click -eq 1 ]]; then
     launch_terminal "alsamixer"
   fi
   display

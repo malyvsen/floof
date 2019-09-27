@@ -1,12 +1,12 @@
 source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
 function display() {
-  if [ $(ip route) -eq "" ]; then
+  if [[ $(ip route) -eq "" ]]; then
     echo "No connection"
     return 1
   else
     ip=$(curl -Ss icanhazip.com)
-    if [ $? -ne 0 ]; then
+    if [[ $? -ne 0 ]]; then
       echo "No connection"
       return 2
     else
@@ -28,7 +28,7 @@ function display_loop() {
 
 display_loop &
 while read click; do
-  if [ $click -eq 1 ]; then
+  if [[ $click -eq 1 ]]; then
     launch_terminal "ip address | less -R"
   fi
   rkill -TERM $!
