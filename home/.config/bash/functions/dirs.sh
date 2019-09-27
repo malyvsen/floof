@@ -22,7 +22,7 @@ function resolve_dir {
 
 # inspect the contents of a directory or file
 function inspect {
-  if [[ -n $1 ]]; then local target="$1"; else local target="$PWD";
+  if [[ -n $1 ]]; then local target="$1"; else local target="$PWD"; fi
   if [[ -d $target ]]; then
     ls -a --color=auto "$target"
   elif [[ -f $target ]]; then
