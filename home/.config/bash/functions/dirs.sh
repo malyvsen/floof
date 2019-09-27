@@ -19,3 +19,15 @@ function mcd {
 function resolve_dir {
   (cd $1 && pwd)
 }
+
+# inspect the contents of a directory or file
+function inspect {
+  [[ -n $1 ]] && local target=$1 || local target="$PWD"
+  if [[ -d $target ]]; then
+    ls -a --color=auto "$target"
+  elif [[ -f $target ]]; then
+    bat "$target"
+  else
+    return 1
+  fi
+}
