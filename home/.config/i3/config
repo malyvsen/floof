@@ -120,7 +120,7 @@ bindsym $mod+Shift+q kill
 bindsym $mod+d exec --no-startup-id i3-dmenu-desktop --dmenu="dmenu -i -fn NovaMono -b -nb $color2 -nf $color7 -sb $color6 -sf $color0"
 
 # take a screenshot
-bindsym Print exec "scrot -s -o ${HOME}/temp/screenshot.png -e 'xclip -sel clip -t image/png < $f'"
+bindsym Print --release exec scrot -s -o ${HOME}/temp/screenshot.png -e "xclip -sel clip -t image/png < $f"
 
 # change focus
 bindsym $mod+Left focus left
