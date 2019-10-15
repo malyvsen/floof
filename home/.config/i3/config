@@ -106,7 +106,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 set $ws_term "11:term"
 set $ws_web  "12:web"
 set $ws_temp "13:temp"
-set $ws0 "0"
+set $ws0 "0:~"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -116,7 +116,7 @@ set $ws6 "6"
 set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
-set $ws10 "10"
+set $ws10 "10:0"
 
 # switch to workspace
 bindsym $mod+comma  workspace $ws_term
