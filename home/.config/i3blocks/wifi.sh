@@ -2,17 +2,16 @@ source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
 function display() {
   if [[ $(ip route) -eq "" ]]; then
-    echo # effectively vanishes block
+    echo "No connection"
     return 1
   else
-    ip=$(curl -Ss icanhazip.com)
-    if [[ $? -ne 0 ]]; then
-      echo "No Internet"
-      return 2
+    wifi_name="$(iwgetid -r)"
+    if [[ -n wifi_name ]]; then
+      echo "$wifi_name"
     else
-      echo "$ip"
-      return 0
+      echo "Wired"
     fi
+    return 0
   fi
 }
 
@@ -29,7 +28,7 @@ function display_loop() {
 display_loop &
 while read click; do
   if [[ $click -eq 1 ]]; then
-    launch_terminal "ip address | less -R"
+    launch_terminal "netctl-auto list | less -R"
   fi
   rkill -TERM $!
   display_loop &
