@@ -1,7 +1,7 @@
 source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
 function display() {
-  if [[ $(ip route) -eq "" ]]; then
+  if ! ip route > /dev/null; then
     echo # effectively vanishes block
     return 1
   else
