@@ -70,6 +70,7 @@ bar {
         active_workspace   $color3 $color3 $color7
         inactive_workspace $color2 $color2 $color7
     }
+    strip_workspace_numbers yes
 }
 
 
@@ -77,14 +78,11 @@ bar {
 
 ## Behavior
 
-focus_on_window_activation focus
-for_window [window_role="GtkFileChooserDialog"] fullscreen enable
-
 # Define names for default workspaces for which we configure key bindings later on.
 # We use variables to avoid repeating the names in multiple places.
-set $ws_term "term"
-set $ws_web  "web"
-set $ws_temp "temp"
+set $ws_term "11:term"
+set $ws_web  "12:web"
+set $ws_temp "13:temp"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -96,6 +94,14 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+# application behavior
+focus_on_window_activation focus
+for_window [window_role="GtkFileChooserDialog"] fullscreen enable
+
+# startup applications
+exec --no-startup-id i3-msg "workspace $ws_term; exec i3-sensible-terminal"
+exec --no-startup-id i3-msg "workspace $ws_web; exec firefox"
+workspace $ws1
 
 
 
@@ -174,28 +180,34 @@ bindsym $mod+bracketleft focus parent
 bindsym $mod+bracketright focus child
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
+bindsym $mod+comma  workspace $ws_term
+bindsym $mod+period workspace $ws_web
+bindsym $mod+slash  workspace $ws_temp
+bindsym $mod+1      workspace $ws1
+bindsym $mod+2      workspace $ws2
+bindsym $mod+3      workspace $ws3
+bindsym $mod+4      workspace $ws4
+bindsym $mod+5      workspace $ws5
+bindsym $mod+6      workspace $ws6
+bindsym $mod+7      workspace $ws7
+bindsym $mod+8      workspace $ws8
+bindsym $mod+9      workspace $ws9
+bindsym $mod+0      workspace $ws10
 
 # move focused container to workspace
-bindsym $mod+$mod_manip+1 move container to workspace $ws1; workspace $ws1
-bindsym $mod+$mod_manip+2 move container to workspace $ws2; workspace $ws2
-bindsym $mod+$mod_manip+3 move container to workspace $ws3; workspace $ws3
-bindsym $mod+$mod_manip+4 move container to workspace $ws4; workspace $ws4
-bindsym $mod+$mod_manip+5 move container to workspace $ws5; workspace $ws5
-bindsym $mod+$mod_manip+6 move container to workspace $ws6; workspace $ws6
-bindsym $mod+$mod_manip+7 move container to workspace $ws7; workspace $ws7
-bindsym $mod+$mod_manip+8 move container to workspace $ws8; workspace $ws8
-bindsym $mod+$mod_manip+9 move container to workspace $ws9; workspace $ws9
-bindsym $mod+$mod_manip+0 move container to workspace $ws10; workspace $ws10
+bindsym $mod+$mod_manip+comma   move container to workspace $ws_term; workspace $ws_term
+bindsym $mod+$mod_manip+period  move container to workspace $ws_web;  workspace $ws_web
+bindsym $mod+$mod_manip+slash   move container to workspace $ws_temp; workspace $ws_temp
+bindsym $mod+$mod_manip+1       move container to workspace $ws1;     workspace $ws1
+bindsym $mod+$mod_manip+2       move container to workspace $ws2;     workspace $ws2
+bindsym $mod+$mod_manip+3       move container to workspace $ws3;     workspace $ws3
+bindsym $mod+$mod_manip+4       move container to workspace $ws4;     workspace $ws4
+bindsym $mod+$mod_manip+5       move container to workspace $ws5;     workspace $ws5
+bindsym $mod+$mod_manip+6       move container to workspace $ws6;     workspace $ws6
+bindsym $mod+$mod_manip+7       move container to workspace $ws7;     workspace $ws7
+bindsym $mod+$mod_manip+8       move container to workspace $ws8;     workspace $ws8
+bindsym $mod+$mod_manip+9       move container to workspace $ws9;     workspace $ws9
+bindsym $mod+$mod_manip+0       move container to workspace $ws10;    workspace $ws10
 
 # reload the configuration file
 bindsym $mod+$mod_manip+c reload
