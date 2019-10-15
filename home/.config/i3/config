@@ -83,6 +83,7 @@ bar {
 set $ws_term "11:term"
 set $ws_web  "12:web"
 set $ws_temp "13:temp"
+set $ws0 "0"
 set $ws1 "1"
 set $ws2 "2"
 set $ws3 "3"
@@ -182,6 +183,7 @@ bindsym $mod+bracketright focus child
 bindsym $mod+comma  workspace $ws_term
 bindsym $mod+period workspace $ws_web
 bindsym $mod+slash  workspace $ws_temp
+bindsym $mod+grave  workspace $ws0
 bindsym $mod+1      workspace $ws1
 bindsym $mod+2      workspace $ws2
 bindsym $mod+3      workspace $ws3
@@ -197,6 +199,7 @@ bindsym $mod+0      workspace $ws10
 bindsym $mod+$mod_manip+comma   move container to workspace $ws_term; workspace $ws_term
 bindsym $mod+$mod_manip+period  move container to workspace $ws_web;  workspace $ws_web
 bindsym $mod+$mod_manip+slash   move container to workspace $ws_temp; workspace $ws_temp
+bindsym $mod+$mod_manip+grave   move container to workspace $ws0;     workspace $ws0
 bindsym $mod+$mod_manip+1       move container to workspace $ws1;     workspace $ws1
 bindsym $mod+$mod_manip+2       move container to workspace $ws2;     workspace $ws2
 bindsym $mod+$mod_manip+3       move container to workspace $ws3;     workspace $ws3
