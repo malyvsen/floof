@@ -2,7 +2,7 @@ source "$(dirname ${BASH_SOURCE[0]})/utils.sh"
 
 function display() {
   idle=$(mpstat -P all 1 1 | grep -oE "[^ ]*$" | tail -1)
-  used=$(echo "100 $idle" | awk '{printf "%.2f", $1 - $2}')
+  used=$(echo "100 $idle" | awk '{printf "%05.2f", $1 - $2}')
   echo "CPU $used%"
 }
 
