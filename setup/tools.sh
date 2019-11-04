@@ -8,5 +8,5 @@ if rice_ask "install additional tools?"; then
   yay -S --needed dmenu ranger autojump &&
   yay -S --needed neofetch gotop-bin sysstat &&
   yay -S --needed atom-editor-bin firefox &&
-  yay -S --needed bat scrot xclip pslist
+  yay -S --needed bat exa scrot xclip pslist
 fi
