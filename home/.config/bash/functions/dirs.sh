@@ -19,15 +19,3 @@ function mcd {
 function resolve_dir {
   (cd $1 && pwd)
 }
-
-# inspect the contents of a directory or file
-function ? {
-  if [[ -n $1 ]]; then local target="$1"; else local target="$PWD"; fi
-  if [[ -d $target ]]; then
-    exa -lha --git "$target"
-  elif [[ -f $target ]]; then
-    bat "$target"
-  else
-    return 1
-  fi
-}
