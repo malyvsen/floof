@@ -1,4 +1,4 @@
-# wild-floof
+# floof
 A minimalist &amp; personal Arch Linux setup.
 
 ![](screenshots/terminals.png)
