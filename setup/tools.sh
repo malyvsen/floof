@@ -5,7 +5,7 @@ if rice_ask "install additional tools?"; then
   pip install thefuck --user &&
   yay -S --needed python-pywal feh imagemagick &&
   yay -S --needed ttf-google-fonts-git &&
-  yay -S --needed dmenu ranger autojump &&
+  yay -S --needed dmenu ranger autojump-git &&
   yay -S --needed neofetch gotop-bin sysstat &&
   yay -S --needed atom-editor-bin firefox &&
   yay -S --needed bat exa scrot xclip pslist
